@@ -1,0 +1,14 @@
+{
+    "name": "rubricate/db",
+    "authors": [
+        {
+            "name":  "Estefanio N Santos",
+            "email": "estefanions@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rubricate\\Db\\": "Rubricate/Db/"
+        }
+    }
+}
