@@ -31,7 +31,12 @@ class UpdateDb extends AbstractFilterDb implements IGetInstructionDb
 
     public function setMaxResults($max)
     {
-        parent::addFilter(new RawFilterDb(sprintf('LIMIT %d', $max)));
+        if($max){
+        
+            parent::addFilter(
+                new RawFilterDb(sprintf('LIMIT %d', $max))
+            );
+        }
 
         return $this;
     } 
@@ -54,7 +59,7 @@ class UpdateDb extends AbstractFilterDb implements IGetInstructionDb
                 $column[] = $key . ' = ' . $value;
             }
 
-            $keyValue = implode(PHP_EOL, $column);
+            $keyValue = implode(',' . PHP_EOL, $column);
 
             
             return sprintf("UPDATE %s SET \n%s \n%s", 

@@ -24,7 +24,10 @@ class SelectDb extends AbstractFilterDb implements IGetInstructionDb
 
     public function setFirstResult($int)
     {
-        $this->filter[] = sprintf('OFFSET %d', $int);
+        if($int){
+
+            $this->filter[] = sprintf('OFFSET %d ', $int);
+        }
 
         return $this;
     } 
@@ -32,6 +35,8 @@ class SelectDb extends AbstractFilterDb implements IGetInstructionDb
 
     public function setOrder(array $order)
     {
+        if(count($order)){
+
         $arr = array();
         foreach ($order as $k => $v) {
             $arr[] = $k . ' ' . strtoupper($v);
@@ -39,7 +44,10 @@ class SelectDb extends AbstractFilterDb implements IGetInstructionDb
 
         $orderBy = implode(', ', $arr);
 
-        $this->filter[] = sprintf('ORDER BY %s', $orderBy);
+        $this->filter[] = sprintf('ORDER BY %s ', $orderBy);
+
+        }
+
 
         return $this;
     } 

@@ -42,7 +42,10 @@ abstract class AbstractFilterDb
 
     public function setMaxResults($max)
     {
-        $this->filter[] = sprintf('LIMIT %d', $max);
+        if($max){
+            $this->filter[] = sprintf('LIMIT %d ', $max);
+        }
+
         return $this;
     } 
 

@@ -7,17 +7,22 @@ use Rubricate\Db\Filter\AbstractFilterDb;
 
 class DeleteDb extends AbstractFilterDb implements IGetInstructionDb
 {
-    private $e, $f;
+    private $e;
     
     public function __construct($table) 
     {
-        $this->e   = $table;
+        $this->e = $table;
     }
 
 
     public function setMaxResults($max)
     {
-        parent::addFilter(new RawFilterDb(sprintf('LIMIT %d', $max)));
+        if($max){
+        
+            parent::addFilter(
+                new RawFilterDb(sprintf('LIMIT %d', $max))
+            );
+        }
 
         return $this;
     } 
