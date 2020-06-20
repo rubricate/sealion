@@ -1,8 +1,8 @@
-# RubricatePHP Db 
+# RubricatePHP DataRecord
 
 Data base Query Object 
 
 ```
-$ composer require rubricate/db
+$ composer require rubricate/data-record
 ```
 
