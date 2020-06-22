@@ -1,5 +1,5 @@
 {
-    "name": "rubricate/db",
+    "name": "rubricate/data-record",
     "authors": [
         {
             "name":  "Estefanio N Santos",
@@ -8,7 +8,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Rubricate\\Db\\": "Rubricate/Db/"
+            "Rubricate\\DataRecord\\": "Rubricate/DataRecord/"
         }
     }
 }
