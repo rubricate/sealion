@@ -1,8 +1,11 @@
-# RubricatePHP DataRecord
+# RubricatePHP Sealion
 
 Data base Query Object 
 
 ```
-$ composer require rubricate/data-record
+$ composer require rubricate/sealion
 ```
+
+[Sealion](https://rubricate.github.io/components/sealion)
+
 
