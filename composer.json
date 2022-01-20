@@ -1,11 +1,26 @@
 {
     "name": "rubricate/sealion",
+"description": "A Rubricate package that allows you to export data from database through model.",
     "authors": [
         {
             "name":  "Estefanio N Santos",
             "email": "estefanions@gmail.com"
         }
     ],
+    "keywords": [
+        "rubricateframework",
+        "rubricatephp",
+        "sealion",
+        "Query Object PHP",
+        "Data Base"
+    ],
+    "support": {
+        "docs"   : "https://rubricate.github.io/components/sealion",
+        "source" : "https://github.com/rubricate/sealion"
+    },
+    "require": {
+        "php": "^7.1"
+    },
     "autoload": {
         "psr-4": {
             "Rubricate\\Sealion\\": "Rubricate/Sealion/"
